@@ -19,7 +19,8 @@
   "scripts": {
     "start": "react-scripts start",
     "serve": "json-server --watch ./src/server/db/index.js --routes ./src/server/routes.json --port 3001",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run save-json-api",
+    "save-json-api": "node ./src/server/scripts/save-json-api.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "json-server": "^0.17.3"
+    "json-server": "^0.17.3",
+    "node-fs": "^0.1.7"
   }
 }
