@@ -1,6 +1,7 @@
 {
   "name": "gh-pages-demo",
   "version": "0.1.0",
+  "homepage": "https://robzarel.github.io/gh-pages-demo",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -22,7 +23,9 @@
     "build": "react-scripts build && npm run save-json-api",
     "save-json-api": "node ./src/server/scripts/save-json-api.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "rm -rf build && npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "json-server": "^0.17.3",
     "node-fs": "^0.1.7"
   }
