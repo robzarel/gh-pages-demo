@@ -1,3 +1,221 @@
 {
-  "greeting": "Hello world"
+  "list": [
+    {
+      "_id": "6460a97bcfe88c312e1eee17",
+      "name": "Barrett White",
+      "gender": "male",
+      "company": "MALATHION",
+      "email": "barrettwhite@malathion.com"
+    },
+    {
+      "_id": "6460a97b0d0c714c8ecde43e",
+      "name": "Kimberly Griffin",
+      "gender": "female",
+      "company": "SUREMAX",
+      "email": "kimberlygriffin@suremax.com"
+    },
+    {
+      "_id": "6460a97bc4adf62d67cc5cd8",
+      "name": "Jacklyn Joyner",
+      "gender": "female",
+      "company": "GAPTEC",
+      "email": "jacklynjoyner@gaptec.com"
+    },
+    {
+      "_id": "6460a97b613fbc928e7ec78b",
+      "name": "Ball Miranda",
+      "gender": "male",
+      "company": "ENOMEN",
+      "email": "ballmiranda@enomen.com"
+    },
+    {
+      "_id": "6460a97bd3cfc0871687ba7f",
+      "name": "Walls Gonzalez",
+      "gender": "male",
+      "company": "COMTRACT",
+      "email": "wallsgonzalez@comtract.com"
+    },
+    {
+      "_id": "6460a97b06cc2955bad0183e",
+      "name": "Rivas Hays",
+      "gender": "male",
+      "company": "BRISTO",
+      "email": "rivashays@bristo.com"
+    },
+    {
+      "_id": "6460a97bc75d5442948519e8",
+      "name": "Krystal Ayala",
+      "gender": "female",
+      "company": "EGYPTO",
+      "email": "krystalayala@egypto.com"
+    },
+    {
+      "_id": "6460a97b1c8cae4ad1be30c0",
+      "name": "Woodward Ramsey",
+      "gender": "male",
+      "company": "ZEROLOGY",
+      "email": "woodwardramsey@zerology.com"
+    },
+    {
+      "_id": "6460a97beb0256e9d3b04c48",
+      "name": "Odom Velasquez",
+      "gender": "male",
+      "company": "COMDOM",
+      "email": "odomvelasquez@comdom.com"
+    },
+    {
+      "_id": "6460a97bdfa2d80b99d1755c",
+      "name": "Mcneil Frye",
+      "gender": "male",
+      "company": "ESCENTA",
+      "email": "mcneilfrye@escenta.com"
+    },
+    {
+      "_id": "6460a97b522ceb300fdded26",
+      "name": "Jerri Callahan",
+      "gender": "female",
+      "company": "ZOARERE",
+      "email": "jerricallahan@zoarere.com"
+    },
+    {
+      "_id": "6460a97bf6b4796aefdb0b23",
+      "name": "Galloway Roberts",
+      "gender": "male",
+      "company": "DEMINIMUM",
+      "email": "gallowayroberts@deminimum.com"
+    },
+    {
+      "_id": "6460a97bbd669501b9ddb905",
+      "name": "Burt Lowe",
+      "gender": "male",
+      "company": "NORALEX",
+      "email": "burtlowe@noralex.com"
+    },
+    {
+      "_id": "6460a97bd956d3556c9313e8",
+      "name": "Poole Monroe",
+      "gender": "male",
+      "company": "ORONOKO",
+      "email": "poolemonroe@oronoko.com"
+    },
+    {
+      "_id": "6460a97b88e4fa2bb19ff05b",
+      "name": "Norman Stokes",
+      "gender": "male",
+      "company": "GEEKFARM",
+      "email": "normanstokes@geekfarm.com"
+    },
+    {
+      "_id": "6460a97b7d3f5804007042aa",
+      "name": "Emily Peterson",
+      "gender": "female",
+      "company": "BUZZMAKER",
+      "email": "emilypeterson@buzzmaker.com"
+    },
+    {
+      "_id": "6460a97bb0886641092a5058",
+      "name": "Shannon West",
+      "gender": "female",
+      "company": "XPLOR",
+      "email": "shannonwest@xplor.com"
+    },
+    {
+      "_id": "6460a97b491169559a764c2e",
+      "name": "Elise Weber",
+      "gender": "female",
+      "company": "INEAR",
+      "email": "eliseweber@inear.com"
+    },
+    {
+      "_id": "6460a97ba3d631fac6ce5cd1",
+      "name": "Desiree Le",
+      "gender": "female",
+      "company": "COMSTRUCT",
+      "email": "desireele@comstruct.com"
+    },
+    {
+      "_id": "6460a97b05a26595b7868c31",
+      "name": "Hudson Donovan",
+      "gender": "male",
+      "company": "PATHWAYS",
+      "email": "hudsondonovan@pathways.com"
+    },
+    {
+      "_id": "6460a97bc8d92644956f4d9e",
+      "name": "Liliana Parrish",
+      "gender": "female",
+      "company": "SURELOGIC",
+      "email": "lilianaparrish@surelogic.com"
+    },
+    {
+      "_id": "6460a97b5feb5702cd7ed5ab",
+      "name": "Francine Cleveland",
+      "gender": "female",
+      "company": "VISALIA",
+      "email": "francinecleveland@visalia.com"
+    },
+    {
+      "_id": "6460a97b3a3f17095bfc0966",
+      "name": "Josephine Sanchez",
+      "gender": "female",
+      "company": "DOGTOWN",
+      "email": "josephinesanchez@dogtown.com"
+    },
+    {
+      "_id": "6460a97bd782be3a51f6efff",
+      "name": "Clarissa Padilla",
+      "gender": "female",
+      "company": "KIOSK",
+      "email": "clarissapadilla@kiosk.com"
+    },
+    {
+      "_id": "6460a97bc570672bc8393062",
+      "name": "Maldonado Cox",
+      "gender": "male",
+      "company": "LIQUICOM",
+      "email": "maldonadocox@liquicom.com"
+    },
+    {
+      "_id": "6460a97b5880d6fbe7a5dbfa",
+      "name": "Natalie Holland",
+      "gender": "female",
+      "company": "BLUPLANET",
+      "email": "natalieholland@bluplanet.com"
+    },
+    {
+      "_id": "6460a97bcc79d39f8dbbafb2",
+      "name": "Mercado Grimes",
+      "gender": "male",
+      "company": "ZAYA",
+      "email": "mercadogrimes@zaya.com"
+    },
+    {
+      "_id": "6460a97be5b777bbd04c171b",
+      "name": "Lavonne Lee",
+      "gender": "female",
+      "company": "TOYLETRY",
+      "email": "lavonnelee@toyletry.com"
+    },
+    {
+      "_id": "6460a97b2abca8811d676256",
+      "name": "Frances Mckinney",
+      "gender": "female",
+      "company": "KONNECT",
+      "email": "francesmckinney@konnect.com"
+    },
+    {
+      "_id": "6460a97ba13695f0d87eb7b1",
+      "name": "Shelton Stark",
+      "gender": "male",
+      "company": "GOKO",
+      "email": "sheltonstark@goko.com"
+    },
+    {
+      "_id": "6460a97b70703966b5d98c6e",
+      "name": "Whitney Harris",
+      "gender": "male",
+      "company": "UNDERTAP",
+      "email": "whitneyharris@undertap.com"
+    }
+  ]
 }

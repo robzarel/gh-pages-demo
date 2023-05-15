@@ -4,7 +4,14 @@ const endpoints = getEndpoints();
 
 type ENDPOINTS = keyof typeof endpoints;
 type RESPONSE_DATA = {
-  greeting: string
+  count: number;
+  list: {
+    _id: string;
+    name: string;
+    gender: string;
+    company: string;
+    email: string;
+  }[];
 };
 
 const getJson = async <T>(endpoint: ENDPOINTS): Promise<T> => {
@@ -20,12 +27,23 @@ const getJson = async <T>(endpoint: ENDPOINTS): Promise<T> => {
 
 type API = {
   get: {
-    data: () => Promise<RESPONSE_DATA>
+    data: (page: number) => Promise<RESPONSE_DATA>
   }
 };
 const api: API = {
   get: {
-    data: () => getJson<RESPONSE_DATA>('data')
+    data: async (page) => {
+      const data = await getJson<RESPONSE_DATA>('data');
+      const startIndex = page === 1 ? 0 : (page - 1) * 10 ;
+      const endIndex = page * 10
+
+      const resp = {
+        count: data.list.length,
+        list: [...data.list.slice(startIndex, endIndex)]
+      };
+
+      return resp;
+    }
   }
 }
 export type { RESPONSE_DATA, ENDPOINTS }

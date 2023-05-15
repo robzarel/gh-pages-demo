@@ -1,0 +1,45 @@
+.paginator {
+  margin: 35px 0;
+  font-family: 'SF Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+  color: black;
+  font-stretch: 100;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.arrow {
+  all: unset;
+  width: 38px;
+  height: 38px;
+  border: 1px solid
+    rgba(0,0,0, .7);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.arrow:hover {
+  border: 1px solid rgba(0,0,0, 0.2);
+}
+
+.arrow[disabled] {
+  color: #a9a9a978;
+  background-color: #f8f8f821;
+}
+.arrow[disabled]:hover {
+  border: 1px solid
+    rgba(0,0,0, .7);
+  cursor: not-allowed;
+}
+
+.navigation {
+  margin-right: 10px;
+}
