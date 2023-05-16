@@ -12,17 +12,33 @@ type OptionProps = {
   option: Option;
   onClick: (value: Option['value']) => void;
 };
-const Option = (props: OptionProps) => {
+const OptionEl = (props: OptionProps) => {
   const {
     option: { value, title },
     onClick,
   } = props;
+  const optionRef = useRef<HTMLLIElement>(null);
 
   const handleClick =
     (clickedValue: Option['value']): MouseEventHandler<HTMLLIElement> =>
     () => {
       onClick(clickedValue);
     };
+
+  useEffect(() => {
+    const option = optionRef.current;
+    if (!option) return;
+    const handleEnterKeyDown = (event: KeyboardEvent) => { 
+      if ((document.activeElement === option) && event.key === 'Enter') {
+        onClick(value);
+      }
+    }
+
+    option.addEventListener('keydown', handleEnterKeyDown);
+    return () => {
+      option.removeEventListener('keydown', handleEnterKeyDown);
+    };
+  }, [value, onClick]);
 
   return (
     <li
@@ -31,6 +47,7 @@ const Option = (props: OptionProps) => {
       onClick={handleClick(value)}
       tabIndex={0}
       data-testid={`select-option-${value}`}
+      ref={optionRef}
     >
       {title}
     </li>
@@ -59,6 +76,7 @@ const Select = (props: SelectProps) => {
   } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const rootRef = useRef<HTMLDivElement>(null);
+  const placeholderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
@@ -74,7 +92,23 @@ const Select = (props: SelectProps) => {
     return () => {
       window.removeEventListener('click', handleClick);
     };
-  }, [isOpen, onClose]);
+  }, [onClose]);
+
+  useEffect(() => {
+    const placeholderEl = placeholderRef.current;
+    if (!placeholderEl) return;
+
+    const handleEnterKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Enter') {
+        setIsOpen((prev) => !prev);
+      }
+    };
+    placeholderEl.addEventListener('keydown', handleEnterKeyDown);
+
+    return () => {
+      placeholderEl.removeEventListener('keydown', handleEnterKeyDown);
+    };
+  }, []);
 
   const handleOptionClick = (value: Option['value']) => {
     setIsOpen(false);
@@ -102,13 +136,14 @@ const Select = (props: SelectProps) => {
         onClick={handlePlaceHolderClick}
         role="button"
         tabIndex={0}
+        ref={placeholderRef}
       >
         {selected?.title || placeholder}
       </div>
       {isOpen && (
         <ul className={Styles.select} data-testid="selectDropdown">
           {options.map((option) => (
-            <Option
+            <OptionEl
               key={option.value}
               option={option}
               onClick={handleOptionClick}
