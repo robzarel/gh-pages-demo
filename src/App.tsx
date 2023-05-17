@@ -8,8 +8,10 @@ import Pagination from './components/pagination';
 import './App.css';
 
 
-import options from './components/select/options.json';
+import selectOptions from './components/select/options.json';
+import radioOptions from './components/radio/options.json';
 import Select from './components/select';
+import RadioGroup from './components/radio';
 
 const ROWS_PER_PAGE = 10;
 
@@ -17,6 +19,8 @@ const getTotalPageCount = (rowCount: number): number =>
   Math.ceil(rowCount / ROWS_PER_PAGE);
 
 function App() {
+  const [period, setPeriod] = useState('');
+  
   const [data, setData] = useState<RESPONSE_DATA | null>(null);
   const [page, setPage] = useState(1);
   const [isLoading, setLoading] = useState(false);
@@ -62,14 +66,25 @@ function App() {
 
   const [month, setMonthValue] = useState('');
   const handleMonthSelect = (value: string) => { setMonthValue(value); };
-  const selectedMonth = options.find((item) => item.value === month);
+  const selectedMonth = selectOptions.find((item) => item.value === month);
+  // handleChange
+
+  const handlePeriodChange = (val: string) => { setPeriod(val); }
 
   return (
     <div className="App">
-      <div className="Select">
+      <div className="RadioGroup">
+        <RadioGroup
+          selected={period}
+          name='radio'
+          onChange={handlePeriodChange}
+          options={radioOptions}
+        />
+      </div>
+      {/* <div className="Select">
         <Select
           mode='cells'
-          options={options}
+          options={selectOptions}
           selected={selectedMonth || null}
           onChange={handleMonthSelect}
           placeholder="Выберите месяц"
@@ -86,7 +101,7 @@ function App() {
           }}
           nav={{ current: page, total: getTotalPageCount(data.count) }}
         />
-      }
+      } */}
     </div>
   );
 }

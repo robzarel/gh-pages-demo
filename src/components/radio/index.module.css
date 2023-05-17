@@ -1,0 +1,41 @@
+.group {
+  display: inline-flex;
+  border-radius: 2px 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2px;
+}
+
+.item {
+  display: block;
+  position: relative;
+  border-radius: 2px;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.label {
+  cursor: pointer;
+  padding: 1px 7px;
+  box-sizing: border-box;
+  font-family: 'SF Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.item[data-checked='true'] .label {
+  background-color: rgba(193, 222, 239, .5);
+}
+
+.label:hover,
+.item[data-checked='true'] .label:hover {
+  background-color: rgba(193, 222, 239, .9);
+}

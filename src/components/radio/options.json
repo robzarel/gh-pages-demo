@@ -1,0 +1,7 @@
+[
+  { "title": "За неделю", "value": "1_week" },
+  { "title": "1 мес", "value": "1_month" },
+  { "title": "3 мес", "value": "3_months" },
+  { "title": "6 мес", "value": "6_months" },
+  { "title": "Все время", "value": "all" }
+]
